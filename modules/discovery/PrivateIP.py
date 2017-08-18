@@ -32,5 +32,5 @@ class PrivateIP():
 					self.printer.plus('Private IP address disclosure: %s'%ip[0])
 				else:
 					self.printer.plus('Private IP address disclosure: %s'%ip)
-		except Exception,ERROR:
+		except Exception:
 			pass
