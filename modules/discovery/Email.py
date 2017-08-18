@@ -31,5 +31,5 @@ class Email():
 					self.printer.plus('Email address disclosure: %s'%email[0])
 				else:
 					self.printer.plus('Email address disclosure: %s'%email)
-		except Exception,ERROR:
+		except Exception:
 			pass
