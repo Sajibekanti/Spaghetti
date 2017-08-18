@@ -32,13 +32,11 @@ class Robots():
 				path = re.findall(r'Disallow:|Allow: (/\S*/)',resp.content,re.I)
 				dpath = []
 				for x in path:
-					if x == '':pass
-					else:
-						if x not in dpath:
-							dpath.append(x)
+					if x != '' and x not in dpath:
+						dpath.append(x)
 				for x in dpath:
 					resp = self.http.Send(self.checker.Path(self.url,x))
-					print ' - [%s] %s'%(resp.status_code,resp.url)
-				print ""
-		except Exception,ERROR:
+					print(' - [%s] %s'%(resp.status_code,resp.url))
+				print("")
+		except Exception:
 			pass
