@@ -34,5 +34,5 @@ class CommonDirectory():
 					self.printer.plus('Directory Found: %s'%resp.url)
 					if re.search(r'index of',resp.content,re.I):
 						self.printer.plus('Dir \'%s\' listing enabled.'%x[0])
-			except Exception,ERROR:
+			except Exception:
 				pass
