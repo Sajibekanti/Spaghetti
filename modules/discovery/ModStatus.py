@@ -31,5 +31,5 @@ class ModStatus():
 				if resp.status_code == 200 and re.search(r'*Apache Server Status for*',resp.content,re.I):
 					self.printer.plus('Apache (mod_status) information disclosure at: %s'%resp.url)
 					break
-		except Exception,ERROR:
+		except Exception:
 			pass
