@@ -32,5 +32,5 @@ class Backdoors():
 				if resp.status_code == 200 and resp._content:
 					self.printer.plus('Found Backdoor: %s'%resp.url)
 					break
-			except Exception,ERROR:
+			except Exception:
 				pass
