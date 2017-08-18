@@ -27,5 +27,5 @@ class ApacheXss():
 			resp = self.http.Send(url=self.url,headers={'Expect':'<script>alert(xss)</script>'})
 			if re.search(r'<script>alert\(xss\)<\/script>',resp.content,re.I):
 				self.printer.plus('Apache is vulnerable to XSS via the Expect header')
-		except Exception,ERROR:
+		except Exception:
 			pass
