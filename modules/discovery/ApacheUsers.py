@@ -28,5 +28,5 @@ class ApacheUsers():
 			resp = self.http.Send(self.cheker.Path(self.url,'/~bin'))
 			if resp.status_code == 200 and resp._content or resp.status_code == 403 and resp._content:
 				self.printer.plus('Apache (mod_userdir) enumeration user is possible.')
-		except Exception,ERROR:
+		except Exception:
 			pass
