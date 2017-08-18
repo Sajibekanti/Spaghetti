@@ -25,7 +25,7 @@ class Spaghetti(object):
 			banner.Usage(True)
 		try:
 			opts,args = getopt.getopt(argv,'u:s:',['url=','scan=','agent=','random-agent','cookie=','proxy=','redirect=','help='])
-		except getopt.error,Error:
+		except getopt.error:
 			banner.Usage(True)
 		for o,a in opts:
 			if o in ('-u','--url'):
