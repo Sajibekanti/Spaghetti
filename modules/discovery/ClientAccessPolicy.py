@@ -36,5 +36,5 @@ class ClientAccessPolicy():
 					self.printer.plus('/clientacesspolicy.xml found domain: ')
 					for x in new_domain:
 						print " - %s"%x
-		except Exception,ERROR:
+		except Exception:
 			pass
