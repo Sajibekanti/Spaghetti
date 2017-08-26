@@ -27,5 +27,5 @@ class HtmlObject():
 			resp = self.http.Send(self.url)
 			if re.search(r'<object.*?>.*?<\/object>',resp._content,re.I):
 				self.printer.plus('Found HTML Object. Logs the existence of HTML object tags.')
-		except Exception,ERROR:
+		except Exception:
 			pass

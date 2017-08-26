@@ -32,5 +32,5 @@ class Cookie():
 					self.printer.plus('Cookies created without HTTPOnly Flag. See https://www.owasp.org/index.php/Testing_for_cookies_attributes_(OTG-SESS-002) for details.')
 				if not re.search(r'(secure)',resp.headers['set-cookie'],re.I):
 					self.printer.plus('Cookies created without Secure Flag. See https://www.owasp.org/index.php/Testing_for_cookies_attributes_(OTG-SESS-002) for details.')
-		except Exception,ERROR:
+		except Exception:
 			pass

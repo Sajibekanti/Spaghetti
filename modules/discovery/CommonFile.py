@@ -31,5 +31,5 @@ class CommonFile():
 				resp = self.http.Send(self.checker.Path(self.url,x[0]))
 				if resp.status_code == 200 and resp._content:
 					self.printer.plus('Files Found: %s'%resp.url)
-			except Exception,ERROR:
+			except Exception:
 				pass

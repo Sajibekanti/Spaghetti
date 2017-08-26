@@ -31,7 +31,7 @@ def strftime(target):
 		t = "%s"%target.split('https://')[1]
 	try:
 		printer.Printer().plus('IP: %s'%socket.gethostbyaddr('%s'%t)[2][0])
-	except socket.error,t:
+	except socket.error:
 		printer.Printer().plus('IP: Host name lookup failure')
 	printer.Printer().plus("Starting: %s\n"%time.strftime('%d/%m/%Y %H:%M:%S'))
 
@@ -48,20 +48,20 @@ def banner():
 
 def Usage(exit=False):
 	banner()
-	print "Usage: %s -u/--url examples.com -s/--scan [0-3]\n"%name
-	print " -u --url\tTarget URL (eg: http://examples.com)"
-	print " -s --scan\tScan Option:\n"
-	print "\t 0:\tFull Scan"
-	print "\t 1:\tAdministrative Console"
-	print "\t 2:\tMisconfiguration / Default File"
-	print "\t 3:\tInformation Disclosure\n"
-	print " --agent\tSet user-agent"
-	print " --random-agent\tRandom user-agent"
-	print " --cookie\tSet cookies, default=None"
-	print " --redirect\tRedirect target URL, default=True"
-	print " --proxy\tSet proxy, (host:port)"
-	print " --help\t\tShow this help and exit\n"
-	print "Examples:"
-	print "\t%s --url http://site.com --scan [0-3]\n"%name
+	print("Usage: %s -u/--url examples.com -s/--scan [0-3]\n"%name)
+	print(" -u --url\tTarget URL (eg: http://examples.com)")
+	print(" -s --scan\tScan Option:\n")
+	print("\t 0:\tFull Scan")
+	print("\t 1:\tAdministrative Console")
+	print("\t 2:\tMisconfiguration / Default File")
+	print("\t 3:\tInformation Disclosure\n")
+	print(" --agent\tSet user-agent")
+	print(" --random-agent\tRandom user-agent")
+	print(" --cookie\tSet cookies, default=None")
+	print(" --redirect\tRedirect target URL, default=True")
+	print(" --proxy\tSet proxy, (host:port)")
+	print(" --help\t\tShow this help and exit\n")
+	print("Examples:")
+	print("\t%s --url http://site.com --scan [0-3]\n" % name)
 	if exit:
 		sys.exit(0)
